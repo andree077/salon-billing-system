@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
 $details=$_POST['details'];
  
      
-    $query=mysqli_query($con, "insert into  tblcustomers(Name,Email,MobileNumber,Gender,Details) value('$name','$email','$mobilenum','$gender','$details')");
+    $query=mysqli_query($con, "insert into  tblemployees(Name,Email,MobileNumber,Gender,Details) value('$name','$email','$mobilenum','$gender','$details')");
     if ($query) {
 echo "<script>alert('Customer has been added.');</script>"; 
 echo "<script>window.location.href = 'add-customer.php'</script>"; 
@@ -23,6 +23,7 @@ echo "<script>window.location.href = 'add-customer.php'</script>";
 echo "<script>alert('Something Went Wrong. Please try again.');</script>";  	
 } }
   ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>

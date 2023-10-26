@@ -17,18 +17,7 @@
               </ul>
               <!-- /nav-second-level -->
             </li>
-            <li class="">
-              <a href="about-us.php"><i class="fa fa-book nav_icon"></i>Pages <span class="fa arrow"></span></a>
-              <ul class="nav nav-second-level collapse">
-                <li>
-                  <a href="about-us.php">About Us</a>
-                </li>
-                <li>
-                  <a href="contact-us.php">Contact Us</a>
-                </li>
-              </ul>
-              <!-- /nav-second-level -->
-            </li>
+          
           
             <li>
               <a href="all-appointment.php"><i class="fa fa-check-square-o nav_icon"></i>Appointment<span class="fa arrow"></span></a>
@@ -48,13 +37,16 @@
               </ul>
               <!-- //nav-second-level -->
             </li>
-           
-        
-            <li>
-              <a href="add-customer.php" class="chart-nav"><i class="fa fa-user nav_icon"></i>Add Customer</a>
-            </li>
              <li>
-              <a href="customer-list.php" class="chart-nav"><i class="fa fa-users nav_icon"></i>Customer List</a>
+              <a href="employee-list.php" class="chart-nav"><i class="fa fa-check-square-o nav_icon"></i>Employees<span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level collapse">
+                <li>
+                  <a href="add-employee.php" class="chart-nav"><i class="fa fa-user nav_icon"></i>Add Employee</a>
+                </li>
+                <li>
+                <a href="employee-list.php" class="chart-nav"><i class="fa fa-user nav_icon"></i>Employee List</a>
+                </li>
+              </ul>
             </li>
               <li>
               <a href="#"><i class="fa fa-check-square-o nav_icon"></i>Reports<span class="fa arrow"></span></a>

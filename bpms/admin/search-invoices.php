@@ -73,33 +73,33 @@ if (strlen($_SESSION['bpmsaid']==0)) {
 							  <button type="submit" name="search" class="btn btn-primary btn-sm">Search</button> </form> 
 						</div>
 						<?php
-if(isset($_POST['search']))
-{ 
+							if(isset($_POST['search']))
+							{ 
 
-$sdata=$_POST['searchdata'];
-  ?>
-  <h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4> 
-						<table class="table table-bordered"> 
-							<thead> <tr> 
-								<th>#</th> 
-								<th>Invoice Id</th> 
-								<th>Customer Name</th> 
-								<th>Invoice Date</th> 
-								<th>Action</th>
-							</tr> 
-							</thead> <tbody>
-<?php
-$ret=mysqli_query($con,"select distinct  tblcustomers.Name,tblinvoice.BillingId,tblinvoice.PostingDate from  tblcustomers   
-	join tblinvoice on tblcustomers.ID=tblinvoice.Userid  where tblinvoice.BillingId like '%$sdata%'");
-$num=mysqli_num_rows($ret);
-if($num>0){
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
+							$sdata=$_POST['searchdata'];
+							?>
+							<h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4> 
+													<table class="table table-bordered"> 
+														<thead> <tr> 
+															<th>#</th> 
+															<th>Invoice Id</th> 
+															<th>Customer Name</th> 
+															<th>Invoice Date</th> 
+															<th>Action</th>
+														</tr> 
+														</thead> <tbody>
+							<?php
+							$ret=mysqli_query($con,"select distinct  tblcustomers.Name,tblinvoice.BillingId,tblinvoice.PostingDate from  tblcustomers   
+								join tblinvoice on tblcustomers.ID=tblinvoice.Userid  where tblinvoice.BillingId like '%$sdata%'");
+							$num=mysqli_num_rows($ret);
+							if($num>0){
+							$cnt=1;
+							while ($row=mysqli_fetch_array($ret)) {
 
-?>
+							?>
 
 						 <tr> 
-						 	<th scope="row"><?php echo $cnt;?></th> 
+						 	<th scope="row"><?php echo $cnt;?></th>
 						 	<td><?php  echo $row['BillingId'];?></td>
 						 	<td><?php  echo $row['Name'];?></td>
 						 	<td><?php  echo $row['PostingDate'];?></td> 
@@ -110,7 +110,6 @@ $cnt=$cnt+1;
 } } else { ?>
   <tr>
     <td colspan="8"> No record found against this search</td>
-
   </tr>
    
 <?php } }?></tbody> </table> 
